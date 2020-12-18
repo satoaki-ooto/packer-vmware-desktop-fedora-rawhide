@@ -1,0 +1,46 @@
+{
+    "builders": [
+        {
+            "boot_command": [
+                "<tab>text net.ifnames=0 inst.ks=https://gitlab.com/feshiba/packer/kickstart/-/raw/master/fedora/fedora.{{user `fedora_version`}}.ks<enter><wait>"
+            ],
+            "boot_wait": "{{user `boot_wait`}}",
+            "disk_size": "{{user `disk_size`}}",
+            "disk_type_id": "0",
+            "guest_os_type": "{{user `guest_os_type`}}",
+            "headless": "{{user `headless`}}",
+            "http_directory": "http",
+            "iso_checksum": "{{user `iso_checksum`}}",
+            "iso_url": "{{user `mirror`}}/{{user `release`}}/{{user `fedora_version`}}/{{user `iso_kind`}}/x86_64/iso/Fedora-{{user `iso_kind`}}-dvd-x86_64-Rawhide-{{user `iso_version`}}.n.0.iso",
+            "shutdown_command": "{{user `shutdown_command`}}",
+            "skip_compaction": false,
+            "ssh_password": "root",
+            "ssh_port": 22,
+            "ssh_timeout": "{{user `ssh_timeout`}}",
+            "ssh_username": "root",
+            "tools_upload_flavor": "linux",
+            "type": "vmware-iso",
+            "cpus": "2",
+            "memory": "4096",
+            "vmx_data_post": {
+                "virtualHW.version": "12",
+                "cleanShutdown": "TRUE",
+                "softPowerOff": "FALSE",
+                "ethernet0.virtualDev": "e1000",
+                "ethernet0.startConnected": "TRUE",
+                "ethernet0.wakeonpcktrcv": "false"
+            },
+            "vmx_remove_ethernet_interfaces": true,
+            "version": "12",
+            "vnc_bind_address": "127.0.0.1",
+            "vnc_disable_password": true
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "compression_level": "{{user `compression_level`}}",
+            "output": "fedora-{{user `fedora_version`}}-{{user `iso_version`}}-amd64-{{.Provider}}.box"
+        }
+    ]
+}

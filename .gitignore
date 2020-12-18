@@ -1,0 +1,7 @@
+packer_cache
+*.box
+output-*
+
+http/fedora.Rawhide.ks
+scripts/fedora_Rawhide/
+template/fedora-rawhide/

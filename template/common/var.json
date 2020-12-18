@@ -1,0 +1,11 @@
+{
+  "boot_wait": "20s",
+  "mirror": "https://dl.fedoraproject.org/pub/fedora/linux",
+  "release": "development",
+  "iso_kind": "Server",
+  "compression_level": "9",
+  "disk_size": "98304",
+  "shutdown_command": "echo 'root' | sudo -S shutdown -P now",
+  "ssh_timeout": "3600",
+  "headless": "false"
+}
