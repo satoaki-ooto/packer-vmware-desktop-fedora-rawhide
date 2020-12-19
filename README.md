@@ -19,7 +19,7 @@ To build all the boxes, you will need installed requires the software listed bel
 We make use of JSON files containing user variables to build specific version of Ubuntu.  
 You tell `packer` to use a specific user variable file via the `-var-file=` command line option.  
 
-For example, to build Fedora Rawhide, use the following:  
+For example, to build on VMware Platform, use the following:
 
 ```bash
 # fedora rawhide on VMware
