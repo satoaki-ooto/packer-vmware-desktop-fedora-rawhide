@@ -9,7 +9,6 @@
             "disk_type_id": "0",
             "guest_os_type": "{{user `guest_os_type`}}",
             "headless": "{{user `headless`}}",
-            "http_directory": "http",
             "iso_checksum": "{{user `iso_checksum`}}",
             "iso_url": "{{user `mirror`}}/{{user `release`}}/{{user `fedora_version`}}/{{user `iso_kind`}}/x86_64/iso/Fedora-{{user `iso_kind`}}-dvd-x86_64-Rawhide-{{user `iso_version`}}.n.0.iso",
             "shutdown_command": "{{user `shutdown_command`}}",
