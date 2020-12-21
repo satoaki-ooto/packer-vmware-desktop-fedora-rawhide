@@ -1,0 +1,3 @@
+[submodule "ansible"]
+	path = ansible
+	url = https://gitlab.com/feshiba/playbook/base.git
