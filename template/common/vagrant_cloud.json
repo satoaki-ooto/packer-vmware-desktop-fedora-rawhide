@@ -1,7 +1,6 @@
 {
     "cloud_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}",
-    "version_date": "{{ env `VAGRANT_CLOUD_BUILD_TIME` }}",
-    "no_release": "false",
-    "release_version": "0",
+    "no_release": "true",
+    "release_version": "34.20201224.0",
     "version_description": "new point release"
 }
